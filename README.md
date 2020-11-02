@@ -1,2 +1,2 @@
 # Rednet
-Acopy of tender for our college
+A copy of TINDER for our college
