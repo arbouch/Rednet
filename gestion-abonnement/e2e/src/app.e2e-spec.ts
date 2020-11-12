@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('rednet app is running!');
+    expect(page.getTitleText()).toEqual('gestion-abonnement app is running!');
   });
 
   afterEach(async () => {

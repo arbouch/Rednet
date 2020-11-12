@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rednet": {
+    "gestion-abonnement": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rednet",
+            "outputPath": "dist/gestion-abonnement",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rednet:build"
+            "browserTarget": "gestion-abonnement:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rednet:build:production"
+              "browserTarget": "gestion-abonnement:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rednet:build"
+            "browserTarget": "gestion-abonnement:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rednet:serve"
+            "devServerTarget": "gestion-abonnement:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rednet:serve:production"
+              "devServerTarget": "gestion-abonnement:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "rednet"
+  "defaultProject": "gestion-abonnement"
 }

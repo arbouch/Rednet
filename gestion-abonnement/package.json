@@ -1,5 +1,5 @@
 {
-  "name": "rednet",
+  "name": "gestion-abonnement",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

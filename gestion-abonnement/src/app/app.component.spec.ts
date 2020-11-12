@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rednet'`, () => {
+  it(`should have as title 'gestion-abonnement'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rednet');
+    expect(app.title).toEqual('gestion-abonnement');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rednet app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('gestion-abonnement app is running!');
   });
 });
