@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AbonnesDetailsComponent } from './abonnes-details/abonnes-details.component';
 import { AjoutAbonneComponent } from './abonnes-details/ajout-abonne/ajout-abonne.component';
+import { AbonnesListeComponent } from './abonnes-details/abonnes-liste/abonnes-liste.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AbonnesDetailsComponent,
-    AjoutAbonneComponent
+    AjoutAbonneComponent,
+    AbonnesListeComponent
   ],
   imports: [
     BrowserModule,
