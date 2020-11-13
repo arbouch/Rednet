@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { AbonnesDetailsComponent } from './abonnes-details/abonnes-details.component';
 import { AjoutAbonneComponent } from './abonnes-details/ajout-abonne/ajout-abonne.component';
 import { AbonnesListeComponent } from './abonnes-details/abonnes-liste/abonnes-liste.component';
+import { AbonnementsDetailsComponent } from './abonnements-details/abonnements-details.component';
+import { AjoutAbonnementComponent } from './abonnements-details/ajout-abonnement/ajout-abonnement.component';
+import { AbonnementListeComponent } from './abonnements-details/abonnement-liste/abonnement-liste.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AbonnesDetailsComponent,
     AjoutAbonneComponent,
-    AbonnesListeComponent
+    AbonnesListeComponent,
+    AbonnementsDetailsComponent,
+    AjoutAbonnementComponent,
+    AbonnementListeComponent
   ],
   imports: [
     BrowserModule,
