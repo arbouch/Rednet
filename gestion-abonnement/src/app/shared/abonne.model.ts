@@ -5,6 +5,7 @@ export class Abonne {
     AbonneCin:string;
     AbonnePhoneNumber:string;
     AbonneEtudiant:boolean;
+    AbonnePhoto:File = null;
     
 
 
