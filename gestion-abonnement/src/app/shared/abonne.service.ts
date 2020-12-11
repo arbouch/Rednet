@@ -7,7 +7,7 @@ import {  HttpClient} from "@angular/common/http";
 })
 export class AbonneService {
   formData:Abonne;
-  readonly root ='http://localhost:3000/';
+  readonly root ='http://localhost:3000';
   list : Abonne[];
   constructor(private http:HttpClient) { }
   PostCategorie() {

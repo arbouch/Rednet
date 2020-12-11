@@ -1,13 +1,18 @@
- 
- 
- 
-   
-  <table class="table table-hover ">
-      <tr *ngFor="let pd of service.list | paginate: {itemsPerPage: 5, currentPage: p } ; " >
+    
+ <table class="table table-hover ">
+      <tr *ngFor="let pd of service.list ; " >
           <td (click)="populateForm(pd) ">
-             {{pd.AboneeId}} 
+             {{pd.AbonneName}} 
           </td>
-          
+          <td (click)="populateForm(pd) ">
+            {{pd.AbonneFirstName}} 
+         </td>
+         <td (click)="populateForm(pd) ">
+            {{pd.AbonneCin}} 
+         </td>
+         <td (click)="populateForm(pd) ">
+            {{pd.AbonnePhoneNumber}} 
+         </td>
   <td> 
       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg" (click)="onDelete(pd.IDVet)">
           <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
