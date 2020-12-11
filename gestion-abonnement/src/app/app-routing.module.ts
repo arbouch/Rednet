@@ -3,7 +3,8 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AbonnementsDetailsComponent } from './abonnements-details/abonnements-details.component';
 import { AbonnesDetailsComponent } from './abonnes-details/abonnes-details.component';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
 const routes: Routes = [
   {
     path: '',

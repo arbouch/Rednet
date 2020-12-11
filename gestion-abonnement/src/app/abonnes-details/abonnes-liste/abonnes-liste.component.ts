@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Abonne  } from './../../shared/abonne.model';
-import { CategorieDetailService } from './../../shared/categorie-detail.service';
+import { AbonneService } from './../../shared/abonne.service';
 
-
+import { FormsModule, NgForm }   from '@angular/forms';
 
 @Component({
   selector: 'app-abonnes-liste',
@@ -12,7 +12,7 @@ import { CategorieDetailService } from './../../shared/categorie-detail.service'
 })
 export class AbonnesListeComponent implements OnInit {
 
-  constructor(public service : CategorieDetailService ) {
+  constructor(public service : AbonneService ) {
 
    }
 
@@ -20,10 +20,28 @@ export class AbonnesListeComponent implements OnInit {
     this.service.refreshList()
 
   }
+  resetForm(form?:NgForm) {
+    if(form!=null)
+      form.resetForm() ;
+      
+      }
   refrech() {
     
     return this.service.refreshList();
   }
 
-
+  populateForm(pd:Abonne){
+    this.service.formData=Object.assign({},pd)
+      }
+      onDelete(IDVet){
+        if(confirm('Etes vous sur de vouloir supprimer ?'+IDVet)
+        )
+        {
+        this.service.deleteCategorie(IDVet).subscribe(res =>  {this.service.refreshList();
+        } ,
+          err=> {
+            console.log(err)
+          })
+      }
+    }
 }

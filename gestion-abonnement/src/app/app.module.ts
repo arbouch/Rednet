@@ -9,7 +9,8 @@ import { AbonnesListeComponent } from './abonnes-details/abonnes-liste/abonnes-l
 import { AbonnementsDetailsComponent } from './abonnements-details/abonnements-details.component';
 import { AjoutAbonnementComponent } from './abonnements-details/ajout-abonnement/ajout-abonnement.component';
 import { AbonnementListeComponent } from './abonnements-details/abonnement-liste/abonnement-liste.component';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,9 @@ import { AbonnementListeComponent } from './abonnements-details/abonnement-liste
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule      
   ],
   providers: [],
   bootstrap: [AppComponent]
