@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Abonne  } from './../../shared/abonne.model';
+import { CategorieDetailService } from './../../shared/categorie-detail.service';
+
+
 
 @Component({
   selector: 'app-abonnes-liste',
@@ -8,9 +12,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbonnesListeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service : CategorieDetailService ) {
 
-  ngOnInit(): void {
+   }
+
+   ngOnInit(): void {
+    this.service.refreshList()
+
   }
+  refrech() {
+    
+    return this.service.refreshList();
+  }
+
 
 }
