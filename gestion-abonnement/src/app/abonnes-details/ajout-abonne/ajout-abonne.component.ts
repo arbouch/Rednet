@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Abonne  } from './../../shared/abonne.model';
+import { NgForm } from '@angular/forms';
 import { AbonneService } from './../../shared/abonne.service';
 
-import { FormsModule, NgForm }   from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-ajout-abonne',
@@ -12,15 +14,80 @@ import { FormsModule, NgForm }   from '@angular/forms';
 })
 export class AjoutAbonneComponent implements OnInit {
 
-  constructor(public service : AbonneService) { }
+  constructor(public service :AbonneService ) 
+  {   }
 
-  ngOnInit(): void {
-    this.service.refreshList()
+  ngOnInit():void {
+    this.resetForm();
 
+  }
+  search() {
+    this.service.list = this.service.list.filter(res =>  {
+      return res.AbonneFirstName.toLocaleLowerCase().match(this.service.formData.AbonneFirstName.toLocaleLowerCase());
+    })
   }
   resetForm(form?:NgForm) {
     if(form!=null)
       form.resetForm() ;
+      this.service.formData = {
+        AboneeId:0,
+        AbonneFirstName :"",
+        AbonnePhoneNumber:"",
+        AbonneName:"",
+        AbonneCin:"",
+        AbonneEtudiant:true,
+        AbonnePhoto:"",
+  
+      }
+
       
       }
-}
+
+      
+      refrech() {
+    
+        return this.service.refreshList();
+      }
+
+onSubmit(form:NgForm) {
+  
+
+      if(this.service.formData.AboneeId==0) 
+       
+         this.insertRecord(form);
+      
+        else 
+      this.updateRecord(form);
+    }
+
+    
+    insertRecord(form:NgForm) {
+      this.service.PostCategorie().subscribe(
+        res=>{
+          this.resetForm(form);
+          
+         this.service.refreshList();
+        },
+        err => {console.log(err);
+        } 
+      )
+    }
+    updateRecord(form:NgForm) {
+      this.service.PutCategorie().subscribe(
+        res=>{
+          this.resetForm(form);
+    
+         this.service.refreshList();
+        },
+        err => {console.log(err);
+        } 
+      )
+    }
+    }
+
+      
+
+
+  
+
+
