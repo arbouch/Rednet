@@ -1,4 +1,4 @@
-module.export = {
-    db: 'mongo://localhost:27017/abonnement'
+module.exports = {
+    db: 'mongodb://localhost:27017/abonnement'
     };
     

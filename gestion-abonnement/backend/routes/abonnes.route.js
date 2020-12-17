@@ -1,12 +1,12 @@
-const { Router } = require('express');
-const express = require('express');
-const { error } = require('protractor');
-const AbonneRoute = express.Router();
+ 
+let express = require('express');
+ 
+const abonneRoute = express.Router();
 
 let Abonne = require('../models/abonnes');
+// get all abonnes
 
-
-AbonneRoute.route('/').get((req, res, next) => 
+abonneRoute.route('/').get((req, res, next) => 
 {
     Abonne.find((error, data) => {
         if (error) {
