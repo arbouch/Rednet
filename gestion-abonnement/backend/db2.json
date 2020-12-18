@@ -1,0 +1,27 @@
+
+
+
+[
+    {
+      "AbonnementType": "virage",
+      "AbonnementTarif": "70dt",
+      "Abonne": "",
+      "QrCodeAbonnement": "224585689"
+      
+    },
+
+    {
+        "AbonnementType": "virage",
+        "AbonnementTarif": "70dt",
+        "Abonne": "",
+        "QrCodeAbonnement": "224585689"
+        
+      },
+      {
+        "AbonnementType": "virage",
+        "AbonnementTarif": "70dt",
+        "Abonne": "",
+        "QrCodeAbonnement": "224585689"
+        
+      }
+    ]
