@@ -1,0 +1,34 @@
+<form #form="ngForm" autocomplete="off"  (submit)="onSubmit(form)"  >
+
+    
+    
+    <!--    <input type="hidden" name="_id"   [value]="service.formData.AboneeId"  /> -->
+     
+    
+    <div class="form-group">
+        <label>Type d'Abonnement     
+        <input required name="AbonnementType" #AbonnementType="ngModel" [(ngModel)]="service.formData.AbonnementType" placeholder="Type" class="form-control">
+    </label>
+    </div>
+    <div class="form-group">
+        <label> Tarif d'Abonnement  
+        <input required name="AbonnementTarif" #AbonnementTarif="ngModel" [(ngModel)]="service.formData.AbonnementTarif" placeholder="Tarif" class="form-control"  >
+    </label> 
+    </div>
+    <div class="form-group">
+        <label> Abonne  
+        <input required name="Abonne" #Abonne="ngModel" [(ngModel)]="service.formData.Abonne" placeholder="Abonne" class="form-control"  >
+    </label> 
+    </div>
+    <div class="form-group">
+        <label> QrCodeAbonnement  
+        <input required name="QrCodeAbonnement" #QrCodeAbonnement="ngModel" [(ngModel)]="service.formData.QrCodeAbonnement" placeholder="QrCodeAbonnement" class="form-control"  >
+    </label> 
+    </div>
+    
+     
+     
+    <div class="form-group">
+        <button class="btn btn-success" type ="submit" >  Ajouter  </button>
+    </div>
+    </form>

@@ -2,9 +2,9 @@ import { Abonne } from './abonne.model';
 
 export class Abonnement {
 
-    AbonnementId:number;
+    _id: string;
     AbonnementType:string;
-    AbonnementTarif:number;
+    AbonnementTarif:string;
     Abonne:Abonne;
     QrCodeAbonnement:String;
 
