@@ -1,13 +1,9 @@
-<form #form="ngForm" autocomplete="off"  (submit)="onSubmit(form)" ngNativeValidate>
+<form #form="ngForm" autocomplete="off"  (submit)="onSubmit(form)"  >
 
-    <div class="form-group">
-        <label>     
-        <input required name="AboneeId" #AboneeId="ngModel" [(ngModel)]="service.formData.AboneeId" placeholder="id" class="form-control">
-    </label>
-    </div>
     
-    <!-- <input type="hidden" name="AboneeId"   [value]="service.formData.AboneeId"  /> -->
-
+    
+<!--    <input type="hidden" name="_id"   [value]="service.formData.AboneeId"  /> -->
+ 
 
 <div class="form-group">
     <label>Nom     

@@ -7,26 +7,28 @@ import {  HttpClient} from "@angular/common/http";
 })
 export class AbonneService {
   formData:Abonne;
-  readonly root ='http://localhost:3000';
+  readonly root ='http://localhost:3000/api';
   list : Abonne[];
+  
   constructor(private http:HttpClient) { }
+  
   PostCategorie() {
 
 
 
-    return  this.http.post(this.root + '/Abonnes',this.formData)
+    return  this.http.post(this.root + '/Abonne',this.formData)
   
       }
       PutCategorie() {
-      
-        return  this.http.put(this.root + '/Abonnes/'+this.formData.AboneeId,this.formData)
+         return  this.http.put(this.root + '/Abonne/'+this.formData._id,this.formData)
+
         }
         deleteCategorie(id) {
         
-          return  this.http.delete(this.root + '/Abonnes/'+id)
+          return  this.http.delete(this.root + '/Abonne/'+id)
             }
   refreshList()
   {
-    this.http.get(this.root + '/Abonnes').toPromise().then(res => this.list = res as  Abonne[]);
+    this.http.get(this.root + '/Abonne').toPromise().then(res => this.list = res as  Abonne[]);
   }
 }

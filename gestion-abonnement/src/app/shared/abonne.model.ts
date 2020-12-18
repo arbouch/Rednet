@@ -1,6 +1,6 @@
 export class Abonne {
-    AboneeId:number;
-    AbonneName :string;
+    _id: string;
+     AbonneName :string;
     AbonneFirstName :string;
     AbonneCin:string;
     AbonnePhoneNumber:string;

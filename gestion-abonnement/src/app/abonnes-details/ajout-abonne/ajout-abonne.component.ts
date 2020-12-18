@@ -30,7 +30,7 @@ export class AjoutAbonneComponent implements OnInit {
     if(form!=null)
       form.resetForm() ;
       this.service.formData = {
-        AboneeId:0,
+        _id:"",
         AbonneFirstName :"",
         AbonnePhoneNumber:"",
         AbonneName:"",
@@ -52,7 +52,7 @@ export class AjoutAbonneComponent implements OnInit {
 onSubmit(form:NgForm) {
   
 
-      if(this.service.formData.AboneeId==0) 
+      if(this.service.formData._id == "") 
        
          this.insertRecord(form);
       

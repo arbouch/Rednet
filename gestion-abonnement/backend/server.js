@@ -23,9 +23,9 @@ app.use(cors());
 
 const port = process.env.PORT || 3000;
 
-/*const AbonneRouter = require('./routes/abonnes.route');
-app.use('/api/Abonne', AbonneRouter);
-*/
+const abonneRoute = require('./routes/abonnes.route');
+app.use('/api/Abonne', abonneRoute);
+
 const server = app.listen(port,() => {
     console.log('connected to port' + port);
     })
