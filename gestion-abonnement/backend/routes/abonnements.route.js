@@ -50,7 +50,7 @@ abonnementRoute.route('/:id').get((req, res, next) =>
 abonnementRoute.post('/', (req, res) => {
     var emp = new Abonnement({
         AbonnementType: req.body.AbonnementType,
-        AbonnementTari: req.body.AbonnementTari,
+        AbonnementTarif: req.body.AbonnementTarif,
         Abonne: req.body.Abonne,
         QrCodeAbonnement: req.body.QrCodeAbonnement,
         
@@ -81,9 +81,9 @@ abonnementRoute.route('/:id').put((req, res, next) =>
 });
   
 
-// delete abonne
-abonneRoute.route('/:id').delete((req, res, next) => {
-    Abonne.findOneAndRemove(req.params.id, (error, data) => {
+// delete abonnement
+abonnementRoute.route('/:id').delete((req, res, next) => {
+    Abonnement.findOneAndRemove(req.params.id, (error, data) => {
       if (error) {
         return next(error);
       } else {
@@ -96,4 +96,4 @@ abonneRoute.route('/:id').delete((req, res, next) => {
   
 
 
-module.exports =abonneRoute;
+module.exports = abonnementRoute;

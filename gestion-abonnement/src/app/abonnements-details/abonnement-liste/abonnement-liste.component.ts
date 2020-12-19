@@ -35,6 +35,25 @@ export class AbonnementListeComponent implements OnInit {
     
     return this.service.refreshList();
   }
+  txtValue:string = null;
+
+  onTextChange(value)
+  {
+    this.service.formData.AbonnementType = value;
+    if(this.service.formData.AbonnementType == '')
+    {
+      this.service.refreshList()
+    }
+  }
+    search() {
+
+    
+      this.service.list = this.service.list.filter(res =>  {
+       return res.AbonnementType.toLocaleLowerCase().match(this.service.formData.AbonnementType.toLocaleLowerCase());
+ 
+     })
+   }
+
 
   populateForm(pd:Abonnement){
     this.service.formData=Object.assign({},pd)

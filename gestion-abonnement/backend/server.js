@@ -25,8 +25,9 @@ const port = process.env.PORT || 3000;
 
 const abonneRoute = require('./routes/abonnes.route');
 app.use('/api/Abonne', abonneRoute);
+
 const abonnementRoute = require('./routes/abonnements.route');
-app.use('/api/Abonnement', abonnementRoute);
+app.use('/api/Abonnements', abonnementRoute);
 
 const server = app.listen(port,() => {
     console.log('connected to port' + port);

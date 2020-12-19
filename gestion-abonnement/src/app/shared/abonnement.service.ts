@@ -15,19 +15,19 @@ export class AbonnementService {
 
 
 
-    return  this.http.post(this.root + '/Abonnement',this.formData)
+    return  this.http.post(this.root + '/Abonnements',this.formData)
   
       }
       PutCategorie() {
-         return  this.http.put(this.root + '/Abonnement/'+this.formData._id,this.formData)
+         return  this.http.put(this.root + '/Abonnements/'+this.formData._id,this.formData)
 
         }
         deleteCategorie(id) {
         
-          return  this.http.delete(this.root + '/Abonnement/'+id)
+          return  this.http.delete(this.root + '/Abonnements/'+id)
             }
   refreshList()
   {
-    this.http.get(this.root + '/Abonnement').toPromise().then(res => this.list = res as  Abonnement[]);
+    this.http.get(this.root + '/Abonnements').toPromise().then(res => this.list = res as  Abonnement[]);
   }
 }
